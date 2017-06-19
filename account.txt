@@ -1,6 +1,0 @@
-ICICI:
-Name: Susanta Behera
-Savings A/c: 005701550880
-Bank: ICICI
-IFSC: ICIC0000057
-Adhaar:693350263862
