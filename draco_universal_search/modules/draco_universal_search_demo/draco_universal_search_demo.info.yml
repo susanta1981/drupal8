@@ -1,7 +1,0 @@
-name: Draco Universal Search Demo
-type: module
-description: Demonstration of how to modify/augment the Universal Search Feed.
-core: 8.x
-package: Draco Core
-dependencies:
-  - draco_universal_search
