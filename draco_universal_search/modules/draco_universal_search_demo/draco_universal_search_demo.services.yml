@@ -1,0 +1,9 @@
+services:
+  draco_universal_search_demo.event_subscriber.feed_built:
+    class: Drupal\draco_universal_search_demo\EventSubscriber\BuildFeedEventSubscriber
+    tags:
+      - {name: event_subscriber}
+  draco_universal_search_demo.event_subscriber.feed_item_built:
+      class: Drupal\draco_universal_search_demo\EventSubscriber\BuildFeedItemEventSubscriber
+      tags:
+        - {name: event_subscriber}

@@ -1,0 +1,15 @@
+{
+  "name": "drupal/draco_universal_search",
+  "type": "drupal-module",
+  "description": "Exposes Draco UDI data as Universal Search feeds.",
+  "minimum-stability": "dev",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://satis.draco.services.dmtio.net"
+    }
+  ],
+  "require": {
+    "vgtf/draco_udi" : "^0.6"
+  }
+}

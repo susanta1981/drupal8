@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains draco_universal_search.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function draco_universal_search_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the draco_universal_search module.
+    case 'help.page.draco_universal_search':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Exposes Draco UDI data as Universal Search feeds.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

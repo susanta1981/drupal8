@@ -1,0 +1,8 @@
+name: Draco Universal Search
+type: module
+description: Exposes Draco UDI data as Universal Search feeds.
+core: 8.x
+package: Draco Core
+dependencies:
+  - draco_udi
+  - rest

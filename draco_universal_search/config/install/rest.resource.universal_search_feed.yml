@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - draco_universal_search
+    - user
+id: universal_search_feed
+plugin_id: universal_search_feed
+granularity: method
+configuration:
+  GET:
+    supported_formats:
+      - apple_us_catalog
+      - roku_us
+      - apple_us_availability
+    supported_auth:
+      - cookie
