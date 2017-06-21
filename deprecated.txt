@@ -1,0 +1,705 @@
+Search "getUsername(" (502 hits in 202 files)
+  D:\drupal8 modules\captcha\src\Tests\CaptchaSessionReuseAttackTestCase.php (2 hits)
+	Line 141:       'name' => $this->normalUser->getUsername(),
+	Line 150:     $this->assertText($this->normalUser->getUsername());
+  D:\drupal8 modules\captcha\src\Tests\CaptchaTestCase.php (1 hit)
+	Line 46:       'name' => $user->getUsername(),
+  D:\drupal8 modules\committed_modules\cmsship\src\Controller\CmsshipController.php (1 hit)
+	Line 50:                 'User ' . $user->getUsername() . ' logged in via cmsship with IP of ' . \Drupal::request()->getClientIp() . '.'
+  D:\drupal8 modules\committed_modules\devel\src\Tests\DevelSwitchUserTest.php (13 hits)
+	Line 73:     $this->drupalGet('/devel/switch/' . $this->webUser->getUsername());
+	Line 86:     $this->drupalGet('/devel/switch/' . $this->switchUser->getUsername());
+	Line 91:     $this->clickLink($this->switchUser->getUsername());
+	Line 96:     $this->clickLink($this->develUser->getUsername());
+	Line 101:     $edit = ['userid' => $this->switchUser->getUsername()];
+	Line 169:     $this->assertSwitchUserListContainsUser($this->develUser->getUsername());
+	Line 170:     $this->assertSwitchUserListContainsUser($this->switchUser->getUsername());
+	Line 176:     $this->assertSwitchUserListContainsUser($this->develUser->getUsername());
+	Line 177:     $this->assertSwitchUserListContainsUser($this->webUser->getUsername());
+	Line 178:     $this->assertSwitchUserListNoContainsUser($this->switchUser->getUsername());
+	Line 184:     $this->assertSwitchUserListContainsUser($this->develUser->getUsername());
+	Line 195:     $this->assertSwitchUserListContainsUser($this->rootUser->getUsername());
+	Line 205:     $this->assertSwitchUserListContainsUser($this->rootUser->getUsername());
+  D:\drupal8 modules\committed_modules\login_security\login_security.module (3 hits)
+	Line 26:   _login_security_remove_events($account->getUsername(), $ip_address);
+	Line 37:     _login_security_remove_events($account->getUsername());
+	Line 422:     '@username' => $account->getUsername(),
+  D:\drupal8 modules\committed_modules\login_security\src\Tests\LoginSecurityEmailTest.php (2 hits)
+	Line 37:       ->set('user_blocked_email_user', $this->admin->getUsername())
+	Line 38:       ->set('login_activity_email_user', $this->admin->getUsername())
+  D:\drupal8 modules\committed_modules\login_security\src\Tests\LoginSecuritySoftBlockTest.php (1 hit)
+	Line 24:     $this->assertNoText(SafeMarkup::format('The user @user_name has been blocked due to failed login attempts.', ['@user_name' => $account->getUsername()]), 'User is not blocked.');
+  D:\drupal8 modules\committed_modules\login_security\src\Tests\LoginSecurityTestBase.php (1 hit)
+	Line 68:       'name' => $user->getUsername(),
+  D:\drupal8 modules\committed_modules\login_security\src\Tests\LoginSecurityUserBlockingTest.php (7 hits)
+	Line 137:       'name' => $this->badUsers[0]->getUsername(),
+	Line 147:     $this->assertBlockedUser($log, $this->badUsers[0]->getUsername());
+	Line 153:       'name' => $this->badUsers[1]->getUsername(),
+	Line 174:     $this->assertBlockedUser($log, $this->badUsers[1]->getUsername());
+	Line 215:     $this->assertText(SafeMarkup::format('The user @user_name has been blocked due to failed login attempts.', ['@user_name' => $normal_user->getUsername()]), 'Blocked message displayed.');
+	Line 240:     $this->assertRaw($this->getDefaultDrupalBlockedUserErrorMessage($normal_user->getUsername()), 'Drupal "...has not been activated or is blocked." login error message found.');
+	Line 254:     $this->assertNoRaw($this->getDefaultDrupalBlockedUserErrorMessage($normal_user->getUsername()), 'Drupal "...has not been activated or is blocked." login error message NOT found.');
+  D:\drupal8 modules\committed_modules\simple_ldap\modules\simple_ldap_user\simple_ldap_user.module (1 hit)
+	Line 129:       $ldap_user = $manager->getLdapUser($user->getUsername());
+  D:\drupal8 modules\committed_modules\ultimate_cron\src\Logger\LogEntry.php (1 hit)
+	Line 192:       $username = $user ? SafeMarkup::format('@username (@uid)', array('@username' => $user->getUsername(), '@uid' => $user->id())) : t('N/A');
+  D:\drupal8 modules\devel\src\Tests\DevelSwitchUserTest.php (13 hits)
+	Line 78:     $this->drupalGet('/devel/switch/' . $this->webUser->getUsername());
+	Line 91:     $this->drupalGet('/devel/switch/' . $this->switchUser->getUsername());
+	Line 96:     $this->clickLink($this->switchUser->getUsername());
+	Line 101:     $this->clickLink($this->develUser->getUsername());
+	Line 106:     $edit = ['userid' => $this->switchUser->getUsername()];
+	Line 174:     $this->assertSwitchUserListContainsUser($this->develUser->getUsername());
+	Line 175:     $this->assertSwitchUserListContainsUser($this->switchUser->getUsername());
+	Line 181:     $this->assertSwitchUserListContainsUser($this->develUser->getUsername());
+	Line 182:     $this->assertSwitchUserListContainsUser($this->webUser->getUsername());
+	Line 183:     $this->assertSwitchUserListNoContainsUser($this->switchUser->getUsername());
+	Line 189:     $this->assertSwitchUserListContainsUser($this->develUser->getUsername());
+	Line 200:     $this->assertSwitchUserListContainsUser($this->rootUser->getUsername());
+	Line 210:     $this->assertSwitchUserListContainsUser($this->rootUser->getUsername());
+  D:\drupal8 modules\ds\src\Plugin\DsField\Field.php (1 hit)
+	Line 29:         $output = $this->entity()->getUsername();
+  D:\drupal8 modules\ds\src\Plugin\DsField\Node\NodeAuthor.php (1 hit)
+	Line 39:         '#markup' => $user->getUsername(),
+  D:\drupal8 modules\entity_browser\src\Tests\EntityBrowserUITest.php (1 hit)
+	Line 70:     $this->assertEqual($file->getFileUri(), 'public://' . $account->getUsername() . '/' . $file->getFilename(), 'Image has the correct uri.');
+  D:\drupal8 modules\lightning-8.x-1.02\core\lib\Drupal\Core\Session\AccountInterface.php (1 hit)
+	Line 117:   public function getUsername();
+  D:\drupal8 modules\lightning-8.x-1.02\core\lib\Drupal\Core\Session\AccountProxy.php (1 hit)
+	Line 116:   public function getUsername() {
+  D:\drupal8 modules\lightning-8.x-1.02\core\lib\Drupal\Core\Session\UserSession.php (1 hit)
+	Line 157:   public function getUsername() {
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\basic_auth\src\Tests\Authentication\BasicAuthTest.php (16 hits)
+	Line 39:     $this->basicAuthGet($url, $account->getUsername(), $account->pass_raw);
+	Line 40:     $this->assertText($account->getUsername(), 'Account name is displayed.');
+	Line 46:     $this->basicAuthGet($url, $account->getUsername(), $this->randomMachineName());
+	Line 47:     $this->assertNoText($account->getUsername(), 'Bad basic auth credentials do not authenticate the user.');
+	Line 60:     $this->basicAuthGet(Url::fromRoute('system.admin'), $account->getUsername(), $account->pass_raw);
+	Line 70:     $this->basicAuthGet($url, $account->getUsername(), $account->pass_raw);
+	Line 92:       $this->basicAuthGet($url, $incorrect_user->getUsername(), $incorrect_user->pass_raw);
+	Line 96:     $this->basicAuthGet($url, $user->getUsername(), $user->pass_raw);
+	Line 117:     $this->basicAuthGet($url, $incorrect_user->getUsername(), $incorrect_user->pass_raw);
+	Line 120:     $this->basicAuthGet($url, $user->getUsername(), $user->pass_raw);
+	Line 125:       $this->basicAuthGet($url, $incorrect_user->getUsername(), $incorrect_user->pass_raw);
+	Line 129:     $this->basicAuthGet($url, $user->getUsername(), $user->pass_raw);
+	Line 134:     $this->basicAuthGet($url, $user2->getUsername(), $user2->pass_raw);
+	Line 148:     $this->basicAuthGet($url, $account->getUsername(), $account->pass_raw);
+	Line 149:     $this->assertText($account->getUsername(), 'Account name is displayed.');
+	Line 173:     $this->basicAuthGet($url, $account->getUsername(), $this->randomMachineName());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\block\src\Tests\BlockUiTest.php (1 hit)
+	Line 212:     $expected_text = '<div id="test_context_aware--username">' . \Drupal::currentUser()->getUsername() . '</div>';
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\block\tests\modules\block_test\src\Plugin\Block\TestContextAwareBlock.php (1 hit)
+	Line 31:       '#markup' => $user ? $user->getUsername() : 'No context mapping selected.' ,
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\comment\src\Entity\Comment.php (1 hit)
+	Line 139:         $this->setAuthorName(\Drupal::currentUser()->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\comment\src\Plugin\Validation\Constraint\CommentNameConstraintValidator.php (1 hit)
+	Line 68:       if ($owner->getUsername() != $author_name) {
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\comment\src\Tests\CommentAnonymousTest.php (2 hits)
+	Line 91:       'name' => $this->adminUser->getUsername(),
+	Line 98:       '%name' => $this->adminUser->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\comment\src\Tests\CommentInterfaceTest.php (2 hits)
+	Line 109:     $comment = $this->postComment(NULL, $comment->comment_body->value, $comment->getSubject(), array('uid' => $this->webUser->getUsername() . ' (' . $this->webUser->id() . ')'));
+	Line 110:     $this->assertTrue($comment->getAuthorName() == $this->webUser->getUsername() && $comment->getOwnerId() == $this->webUser->id(), 'Comment author successfully changed to a registered user.');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\comment\src\Tests\CommentPreviewTest.php (2 hits)
+	Line 138:     $edit['uid'] = $web_user->getUsername() . ' (' . $web_user->id() . ')';
+	Line 152:     $this->assertText($web_user->getUsername(), 'Author displayed.');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\comment\src\Tests\CommentTranslationUITest.php (1 hit)
+	Line 162:         'uid' => $user->getUsername() . ' (' . $user->id() . ')',
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\comment\tests\src\Kernel\CommentFieldAccessTest.php (8 hits)
+	Line 214:           '@user' => $set['user']->getUsername(),
+	Line 219:           '@user' => $set['user']->getUsername(),
+	Line 231:         '@user' => $set['user']->getUsername(),
+	Line 253:           '@user' => $set['user']->getUsername(),
+	Line 259:           '@user' => $set['user']->getUsername(),
+	Line 274:           '@user' => $set['user']->getUsername(),
+	Line 279:           '@user' => $set['user']->getUsername(),
+	Line 301:           '@user' => $set['user']->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\comment\tests\src\Kernel\Views\CommentViewsFieldAccessTest.php (1 hit)
+	Line 70:     $this->assertFieldAccess('comment', 'uid', $user->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\contact\src\MailHandler.php (3 hits)
+	Line 130:         '%sender-name' => $sender_cloned->getUsername(),
+	Line 137:         '%sender-name' => $sender_cloned->getUsername(),
+	Line 139:         '%recipient-name' => $message->getPersonalRecipient()->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\contact\src\MessageForm.php (2 hits)
+	Line 124:       $form['name']['#value'] = $user->getUsername();
+	Line 126:       $form['name']['#plain_text'] = $user->getUsername();
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\contact\src\Tests\ContactPersonalTest.php (5 hits)
+	Line 63:     $mail = $this->webUser->getUsername() . '&escaped@example.com';
+	Line 80:       '@recipient-name' => $this->contactUser->getUsername(),
+	Line 85:     $this->assertTrue(strpos($mail['body'], $this->webUser->getUsername()) !== FALSE, 'Sender name is in sent message.');
+	Line 96:       '@recipient_name' => $this->contactUser->getUsername()
+	Line 112:     $this->assertRaw(t('Contact @username', array('@username' => $this->adminUser->getUsername())));
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\content_translation\src\ContentTranslationHandler.php (1 hit)
+	Line 606:         $form_state->setErrorByName('content_translation][uid', t('The translation authoring username %name does not exist.', array('%name' => $account->getUsername())));
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\content_translation\src\Tests\ContentTranslationUITestBase.php (1 hit)
+	Line 298:         'content_translation[uid]' => $user->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\content_translation\src\Tests\ContentTranslationWorkflowsTest.php (1 hit)
+	Line 151:     $args = ['@user_label' => $user->getUsername()];
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\dblog\src\Tests\DbLogTest.php (1 hit)
+	Line 349:     $this->assertTrue($count_before > 0, format_string('DBLog contains @count records for @name', array('@count' => $count_before, '@name' => $user->getUsername())));
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\language\src\Tests\LanguageUrlRewritingTest.php (1 hit)
+	Line 64:     $this->assertText($this->webUser->getUsername(), 'Page correctly retrieved');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\node\src\Tests\NodeAccessBaseTableTest.php (1 hit)
+	Line 103:           'title[0][value]' => t('@private_public Article created by @user', array('@private_public' => $type, '@user' => $this->webUser->getUsername())),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\node\src\Tests\NodeCreationTest.php (2 hits)
+	Line 59:     $this->assertNoText($node->getOwner()->getUsername());
+	Line 69:     $this->assertText($node->getOwner()->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\node\src\Tests\NodeEditFormTest.php (1 hit)
+	Line 211:     $edit[$form_element_name] = $this->webUser->getUsername();
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\node\src\Tests\NodeTranslationUITest.php (1 hit)
+	Line 196:         'uid[0][target_id]' => $user->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\node\tests\src\Kernel\NodeTokenReplaceTest.php (2 hits)
+	Line 72:     $tests['[node:author]'] = $account->getUsername();
+	Line 74:     $tests['[node:author:name]'] = $account->getUsername();
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\node\tests\src\Kernel\Views\NodeViewsFieldAccessTest.php (1 hit)
+	Line 63:     $this->assertFieldAccess('node', 'uid', $user->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\rdf\src\Tests\CommentAttributesTest.php (2 hits)
+	Line 157:     $this->assertLink($this->webUser->getUsername());
+	Line 323:     $name = empty($account["name"]) ? $this->webUser->getUsername() : $account["name"] . " (not verified)";
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\rdf\src\Tests\StandardProfileTest.php (1 hit)
+	Line 480:       'value' => $this->webUser->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\rdf\src\Tests\UserAttributesTest.php (2 hits)
+	Line 76:         'value' => $author->getUsername(),
+	Line 101:         'value' => $author->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\rest\src\Tests\AuthTest.php (1 hit)
+	Line 60:     $this->basicAuthGet($entity->urlInfo()->setRouteParameter('_format', $this->defaultFormat), $account->getUsername(), $account->pass_raw);
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\rest\src\Tests\CsrfTest.php (1 hit)
+	Line 65:     $curl_options[CURLOPT_USERPWD] = $this->account->getUsername() . ':' . $this->account->pass_raw;
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\search\src\Tests\SearchConfigSettingsFormTest.php (1 hit)
+	Line 138:         'keys' => $this->searchUser->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\search\src\Tests\SearchExactTest.php (2 hits)
+	Line 65:     $this->assertText($user->getUsername(), 'Basic page node displays author name when post settings are on.');
+	Line 74:     $this->assertNoText($user->getUsername(), 'Basic page node does not display author name when post settings are off.');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\search\src\Tests\SearchNodePunctuationTest.php (1 hit)
+	Line 48:     $username = $node->getOwner()->getUsername();
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\search\src\Tests\SearchPageCacheTagsTest.php (1 hit)
+	Line 105:     $edit['keys'] = $this->searchingUser->getUsername();
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\search\src\Tests\SearchPageTextTest.php (2 hits)
+	Line 96:     $edit['keys'] = $this->searchingUser->getUsername();
+	Line 99:     $this->assertTitle(t($title_source, array('@keywords' => Unicode::truncate($this->searchingUser->getUsername(), 60, TRUE, TRUE))));
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\serialization\tests\modules\entity_serialization_test\entity_serialization_test.module (1 hit)
+	Line 20:   if ($context['field_definition']->getName() == 'pass' && $context['account']->getUsername() == 'serialization_test_user') {
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\simpletest\src\Tests\BrowserTest.php (1 hit)
+	Line 94:     $edit = ['name' => $user->getUsername(), 'pass' => $user->pass_raw];
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\simpletest\src\Tests\SimpleTestBrowserTest.php (1 hit)
+	Line 60:       'name' => $user->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\simpletest\src\WebTestBase.php (2 hits)
+	Line 460:       'name' => $account->getUsername(),
+	Line 469:     $pass = $this->assert($this->drupalUserIsLoggedIn($account), format_string('User %name successfully logged in.', array('%name' => $account->getUsername())), 'User login');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Entity\EntityReferenceSelection\EntityReferenceSelectionAccessTest.php (1 hit)
+	Line 241:       $user_labels[$key] = Html::escape($account->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Installer\DistributionProfileTest.php (1 hit)
+	Line 70:     $this->assertText($this->rootUser->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Installer\InstallerTest.php (1 hit)
+	Line 21:     $this->assertText($this->rootUser->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Installer\SingleVisibleProfileTest.php (1 hit)
+	Line 60:     $this->assertText($this->rootUser->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Menu\BreadcrumbTest.php (11 hits)
+	Line 314:     $this->assertBreadcrumb('user/' . $this->adminUser->id(), $trail, $this->adminUser->getUsername());
+	Line 319:     $this->assertBreadcrumb('user', $trail, $this->adminUser->getUsername());
+	Line 320:     $this->assertBreadcrumb('user/' . $this->adminUser->id(), $trail, $this->adminUser->getUsername());
+	Line 322:       'user/' . $this->adminUser->id() => $this->adminUser->getUsername(),
+	Line 324:     $this->assertBreadcrumb('user/' . $this->adminUser->id() . '/edit', $trail, $this->adminUser->getUsername());
+	Line 335:     $this->assertBreadcrumb('user/' . $this->adminUser->id(), $trail, $this->adminUser->getUsername());
+	Line 337:       'user/' . $this->adminUser->id() => $this->adminUser->getUsername(),
+	Line 339:     $this->assertBreadcrumb('user/' . $this->adminUser->id() . '/edit', $trail, $this->adminUser->getUsername());
+	Line 343:     $this->assertBreadcrumb('user/' . $this->webUser->id(), $trail, $this->webUser->getUsername());
+	Line 345:       'user/' . $this->webUser->id() => $this->webUser->getUsername(),
+	Line 347:     $this->assertBreadcrumb('user/' . $this->webUser->id() . '/edit', $trail, $this->webUser->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Path\UrlAlterFunctionalTest.php (1 hit)
+	Line 34:     $name = $account->getUsername();
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Plugin\ContextPluginTest.php (2 hits)
+	Line 75:     $this->assertEqual($plugin->getContextValue('user')->getUsername(), $user->getUsername());
+	Line 75:     $this->assertEqual($plugin->getContextValue('user')->getUsername(), $user->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Routing\RouterTest.php (4 hits)
+	Line 239:     $this->assertText($account->getUsername() . ':' . $second_account->getUsername());
+	Line 239:     $this->assertText($account->getUsername() . ':' . $second_account->getUsername());
+	Line 243:     $this->assertText($account->getUsername() . ':' . $second_account->getUsername());
+	Line 243:     $this->assertText($account->getUsername() . ':' . $second_account->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Session\SessionAuthenticationTest.php (5 hits)
+	Line 58:     $this->basicAuthGet($protected_url, $this->user->getUsername(), $this->user->pass_raw);
+	Line 82:     $response = $this->basicAuthGet('session-test/set-session/' . $test_value, $this->user->getUsername(), $this->user->pass_raw);
+	Line 87:     $response = $this->basicAuthGet('session-test/get-session', $this->user->getUsername(), $this->user->pass_raw);
+	Line 121:     $this->basicAuthGet($no_cookie_url, $this->user->getUsername(), $this->user->pass_raw);
+	Line 126:     $edit = ['name' => $this->user->getUsername(), 'pass' => $this->user->pass_raw];
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Session\SessionHttpsTest.php (2 hits)
+	Line 120:     $edit = array('name' => $account->getUsername(), 'pass' => $account->pass_raw);
+	Line 151:     $edit = array('name' => $account->getUsername(), 'pass' => $account->pass_raw);
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Session\SessionTest.php (3 hits)
+	Line 59:       'name' => $user->getUsername(),
+	Line 64:     $pass = $this->assertText($user->getUsername(), format_string('Found name: %name', array('%name' => $user->getUsername())), 'User login');
+	Line 64:     $pass = $this->assertText($user->getUsername(), format_string('Found name: %name', array('%name' => $user->getUsername())), 'User login');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\System\AccessDeniedTest.php (2 hits)
+	Line 73:     $this->assertText($this->adminUser->getUsername(), 'Found the custom 403 page');
+	Line 101:       'name' => $this->adminUser->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\System\PageNotFoundTest.php (1 hit)
+	Line 56:     $this->assertText($this->adminUser->getUsername(), 'Found the custom 404 page');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\System\SiteMaintenanceTest.php (2 hits)
+	Line 83:       'name' => $this->user->getUsername(),
+	Line 113:       'name' => $this->user->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Theme\FastTest.php (2 hits)
+	Line 31:     $this->drupalGet('user/autocomplete', array('query' => array('q' => $this->account->getUsername())));
+	Line 32:     $this->assertRaw($this->account->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\src\Tests\Update\UpdatePathTestBase.php (1 hit)
+	Line 305:     $account->setUsername($this->rootUser->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\tests\modules\database_test\src\Form\DatabaseTestForm.php (2 hits)
+	Line 53:         'title' => array('data' => array('#title' => $account->getUsername())),
+	Line 54:         'username' => $account->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\tests\modules\form_test\src\Controller\FormTestController.php (1 hit)
+	Line 25:       'name' => $user->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\tests\modules\router_test_directory\src\TestContent.php (3 hits)
+	Line 52:     return ['#markup' => $account->getUsername()];
+	Line 56:     $current_user_name = $this->currentUser()->getUsername();
+	Line 58:     return ['#markup' => $current_user_name . ':' . $user->getUsername()];
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\tests\modules\session_test\session_test.module (1 hit)
+	Line 12:   if ($account->getUsername() == 'session_test_user') {
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\system\tests\modules\url_alter_test\src\PathProcessorTest.php (1 hit)
+	Line 45:         $path = '/user/' . $account->getUsername() . $matches[2];
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\tracker\src\Controller\TrackerUserTab.php (1 hit)
+	Line 25:     return $user->getUsername();
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\tracker\src\Tests\TrackerTest.php (1 hit)
+	Line 200:     $this->assertTitle(t('@name | @site', array('@name' => $this->user->getUsername(), '@site' => $this->config('system.site')->get('name'))), 'The user tracker page has the correct page title.');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\AccountForm.php (1 hit)
+	Line 109:       '#default_value' => (!$register ? $account->getUsername() : ''),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Controller\UserController.php (3 hits)
+	Line 98:             array('%other_user' => $account->getUsername(), '%resetting_user' => $reset_link_user->getUsername(), ':logout' => $this->url('user.logout'))), 'warning');
+	Line 98:             array('%other_user' => $account->getUsername(), '%resetting_user' => $reset_link_user->getUsername(), ':logout' => $this->url('user.logout'))), 'warning');
+	Line 161:     return $user ? ['#markup' => $user->getUsername(), '#allowed_tags' => Xss::getHtmlTagList()] : '';
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Entity\User.php (1 hit)
+	Line 359:   public function getUsername() {
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Form\UserPasswordForm.php (1 hit)
+	Line 142:       $this->logger('user')->notice('Password reset instructions mailed to %name at %email.', array('%name' => $account->getUsername(), '%email' => $account->getEmail()));
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Form\UserPasswordResetForm.php (3 hits)
+	Line 69:       $form['message'] = array('#markup' => $this->t('<p>This is a one-time login for %user_name and will expire on %expiration_date.</p><p>Click on this button to log in to the site and change your password.</p>', array('%user_name' => $user->getUsername(), '%expiration_date' => $expiration_date)));
+	Line 74:       $form['message'] = array('#markup' => $this->t('<p>This is a one-time login for %user_name.</p><p>Click on this button to log in to the site and change your password.</p>', array('%user_name' => $user->getUsername())));
+	Line 102:     $this->logger->notice('User %name used one-time login link at time %timestamp.', array('%name' => $user->getUsername(), '%timestamp' => $form_state->getValue('timestamp')));
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\RegisterForm.php (3 hits)
+	Line 104:       drupal_set_message($this->t('Created a new user account for <a href=":url">%name</a>. No email has been sent.', array(':url' => $account->url(), '%name' => $account->getUsername())));
+	Line 116:         drupal_set_message($this->t('The new user <a href=":url">%name</a> was created without an email address, so no welcome message was sent.', array(':url' => $account->url(), '%name' => $account->getUsername())));
+	Line 122:             drupal_set_message($this->t('A welcome message with further instructions has been emailed to the new user <a href=":url">%name</a>.', array(':url' => $account->url(), '%name' => $account->getUsername())));
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\UserAdminTest.php (16 hits)
+	Line 48:     $this->assertText($user_a->getUsername(), 'Found user A on admin users page');
+	Line 49:     $this->assertText($user_b->getUsername(), 'Found user B on admin users page');
+	Line 50:     $this->assertText($user_c->getUsername(), 'Found user C on admin users page');
+	Line 51:     $this->assertText($admin_user->getUsername(), 'Found Admin user on admin users page');
+	Line 66:     $this->drupalGet('admin/people', array('query' => array('user' => $user_a->getUsername())));
+	Line 69:     $this->assertEqual($user_a->getUsername(), (string) $result[0]->td[1]->span, 'Filter by username returned the right user.');
+	Line 74:     $this->assertEqual($user_a->getUsername(), (string) $result[0]->td[1]->span, 'Filter by username returned the right user.');
+	Line 80:     $this->assertNoText($user_a->getUsername(), 'User A not on filtered by perm admin users page');
+	Line 81:     $this->assertText($user_b->getUsername(), 'Found user B on filtered by perm admin users page');
+	Line 82:     $this->assertText($user_c->getUsername(), 'Found user C on filtered by perm admin users page');
+	Line 90:     $this->assertNoText($user_a->getUsername(), 'User A not on filtered by role on admin users page');
+	Line 91:     $this->assertNoText($user_b->getUsername(), 'User B not on filtered by role on admin users page');
+	Line 92:     $this->assertText($user_c->getUsername(), 'User C on filtered by role on admin users page');
+	Line 116:     $this->assertNoText($user_a->getUsername(), 'User A not on filtered by status on admin users page');
+	Line 117:     $this->assertNoText($user_b->getUsername(), 'User B not on filtered by status on admin users page');
+	Line 118:     $this->assertText($user_c->getUsername(), 'User C on filtered by status on admin users page');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\UserBlocksTest.php (6 hits)
+	Line 70:     $edit['name'] = $user->getUsername();
+	Line 118:     $this->assertText($user1->getUsername(), 'Active user 1 found in online list.');
+	Line 119:     $this->assertText($user2->getUsername(), 'Active user 2 found in online list.');
+	Line 120:     $this->assertNoText($user3->getUsername(), 'Inactive user not found in online list.');
+	Line 121:     $this->assertTrue(strpos($this->getRawContent(), $user1->getUsername()) > strpos($this->getRawContent(), $user2->getUsername()), 'Online users are ordered correctly.');
+	Line 121:     $this->assertTrue(strpos($this->getRawContent(), $user1->getUsername()) > strpos($this->getRawContent(), $user2->getUsername()), 'Online users are ordered correctly.');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\UserCancelTest.php (10 hits)
+	Line 87:     $this->assertRaw(t('%name has been deleted.', array('%name' => $account->getUsername())), 'User deleted.');
+	Line 218:     $this->assertRaw(t('%name has been disabled.', array('%name' => $account->getUsername())), "Confirmation message displayed to user.");
+	Line 288:     $this->assertRaw(t('%name has been disabled.', array('%name' => $account->getUsername())), "Confirmation message displayed to user.");
+	Line 368:     $this->assertRaw(t('%name has been deleted.', array('%name' => $account->getUsername())), "Confirmation message displayed to user.");
+	Line 486:     $this->assertRaw(t('%name has been deleted.', array('%name' => $account->getUsername())), "Confirmation message displayed to user.");
+	Line 505:     $this->assertRaw(t('Are you sure you want to cancel the account %name?', array('%name' => $account->getUsername())), 'Confirmation form to cancel account displayed.');
+	Line 510:     $this->assertRaw(t('%name has been deleted.', array('%name' => $account->getUsername())), 'User deleted.');
+	Line 533:     $this->assertRaw(t('Are you sure you want to cancel the account %name?', array('%name' => $account->getUsername())), 'Confirmation form to cancel account displayed.');
+	Line 538:     $this->assertRaw(t('%name has been deleted.', array('%name' => $account->getUsername())), 'User deleted.');
+	Line 580:       $status = $status && (strpos($this->content, $account->getUsername() . '</em> has been deleted.') !== FALSE);
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\UserEditTest.php (1 hit)
+	Line 24:     $edit['name'] = $user2->getUsername();
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\UserEntityCallbacksTest.php (2 hits)
+	Line 48:     $this->assertEqual($this->account->label(), $this->account->getUsername(), 'The username should be used as label');
+	Line 61:     $this->assertEqual($this->account->getUsername(), $this->account->name->value, 'The user name should not be altered.');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\UserLoginTest.php (1 hit)
+	Line 159:       'name' => $account->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\UserPasswordResetTest.php (8 hits)
+	Line 81:     $edit['name'] = $this->account->getUsername();
+	Line 86:     $subject = t('Replacement login information for @username at @site', array('@username' => $this->account->getUsername(), '@site' => $this->config('system.site')->get('name')));
+	Line 98:     $this->assertText($this->account->getUsername(), 'One-time login page contains the correct username.');
+	Line 105:     $this->assertTitle(t('@name | @site', array('@name' => $this->account->getUsername(), '@site' => $this->config('system.site')->get('name'))), 'Logged in using password reset link.');
+	Line 165:     $edit = array('name' => $blocked_account->getUsername());
+	Line 167:     $this->assertRaw(t('%name is blocked or has not been activated yet.', array('%name' => $blocked_account->getUsername())), 'Notified user blocked accounts can not request a new password');
+	Line 172:     $edit = array('name' => $this->account->getUsername());
+	Line 268:     $this->assertNoText($user2->getUsername(), 'The invalid password reset page does not show the user name.');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\UserPictureTest.php (1 hit)
+	Line 99:     $alt_text = 'Profile picture for user ' . $this->webUser->getUsername();
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\UserRegistrationTest.php (3 hits)
+	Line 253:     $this->assertEqual($new_user->getUsername(), $name, 'Username matches.');
+	Line 272:     $edit = ['mail' => 'test@example.com', 'name' => $account->getUsername()];
+	Line 274:     $this->assertRaw(SafeMarkup::format('The username %value is already taken.', ['%value' => $account->getUsername()]));
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\UserSearchTest.php (8 hits)
+	Line 40:     $keys = $user1->getUsername();
+	Line 65:     $this->assertText($user2->getUsername(), 'Search by email resulted in username on page for administrative user');
+	Line 72:     $this->assertText($user2->getUsername(), 'Search by email substring resulted in username on page for administrative user');
+	Line 78:     $this->assertText($user2->getUsername(), 'Search for email wildcard resulted in username on page for administrative user');
+	Line 81:     $keys = $user1->getUsername();
+	Line 94:     $edit = array('keys' => $blocked_user->getUsername());
+	Line 96:     $this->assertText($blocked_user->getUsername(), 'Blocked users are listed on the user search results for users with the "administer users" permission.');
+	Line 101:     $edit = array('keys' => $blocked_user->getUsername());
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\src\Tests\Views\ArgumentValidateTest.php (1 hit)
+	Line 67:     $this->assertTrue($view->argument['null']->validateArgument($account->getUsername()));
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\tests\modules\user_access_test\user_access_test.module (2 hits)
+	Line 15:   if ($entity->getUsername() == "no_edit" && $operation == "update") {
+	Line 19:   if ($entity->getUsername() == "no_delete" && $operation == "delete") {
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\tests\src\Kernel\Migrate\MigrateUserAdminPassTest.php (2 hits)
+	Line 97:     $this->assertIdentical($admin_account->getUsername(), 'site_admin');
+	Line 104:     $this->assertIdentical($user_account->getUsername(), 'random_user');
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\user\user.module (4 hits)
+	Line 390:         $item->get('alt')->setValue(\Drupal::translation()->translate('Profile picture for user @username', ['@username' => $account->getUsername()]));
+	Line 473:   $variables['name_raw'] = $account->getUsername();
+	Line 530:   \Drupal::logger('user')->notice('Session opened for %name.', array('%name' => $account->getUsername()));
+	Line 1263:       'username' => \Drupal::currentUser()->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\core\modules\views\tests\src\Kernel\Plugin\RelationshipTest.php (2 hits)
+	Line 173:     $this->assertEqual(1, count($this->xpath($xpath, [':id' => 1, ':author' => $author1->getUsername()])));
+	Line 174:     $this->assertEqual(1, count($this->xpath($xpath, [':id' => 2, ':author' => $author2->getUsername()])));
+  D:\drupal8 modules\lightning-8.x-1.02\core\tests\Drupal\KernelTests\Core\Entity\EntityFieldTest.php (7 hits)
+	Line 136:     $this->assertEqual($this->entityUser->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: User name can be read.', array('%entity_type' => $entity_type)));
+	Line 142:     $this->assertEqual($new_user1->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: Updated username value can be read.', array('%entity_type' => $entity_type)));
+	Line 148:     $this->assertEqual($new_user2->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: Updated username value can be read.', array('%entity_type' => $entity_type)));
+	Line 161:     $this->assertEqual($new_user2->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: Updated user name value can be read.', array('%entity_type' => $entity_type)));
+	Line 166:     $this->assertEqual($new_user2->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: Updated user name value can be read.', array('%entity_type' => $entity_type)));
+	Line 271:     $this->assertEqual($this->entityUser->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: User name can be read.', array('%entity_type' => $entity_type)));
+	Line 389:     $this->assertEqual($this->entityUser->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: User name can be read.', array('%entity_type' => $entity_type)));
+  D:\drupal8 modules\lightning-8.x-1.02\core\tests\Drupal\KernelTests\Core\Entity\EntityQueryRelationshipTest.php (2 hits)
+	Line 121:       ->condition("user_id.entity.name", $this->accounts[0]->getUsername())
+	Line 126:       ->condition("user_id.entity.name", $this->accounts[0]->getUsername(), '<>')
+  D:\drupal8 modules\lightning-8.x-1.02\core\tests\Drupal\Tests\BrowserTestBase.php (2 hits)
+	Line 854:       'name' => $account->getUsername(),
+	Line 860:     $this->assertTrue($this->drupalUserIsLoggedIn($account), SafeMarkup::format('User %name successfully logged in.', array('name' => $account->getUsername())));
+  D:\drupal8 modules\lightning-8.x-1.02\core\themes\seven\seven.theme (1 hit)
+	Line 183:       '#markup' => '<h4 class="label inline">' . t('Author') . '</h4> ' . $node->getOwner()->getUsername(),
+  D:\drupal8 modules\lightning-8.x-1.02\profiles\lightning\modules\contrib\entity_browser\src\Tests\EntityBrowserUITest.php (1 hit)
+	Line 70:     $this->assertEqual($file->getFileUri(), 'public://' . $account->getUsername() . '/' . $file->getFilename(), 'Image has the correct uri.');
+  D:\drupal8 modules\lightning-8.x-1.02\profiles\lightning\modules\contrib\pathauto\src\Tests\PathautoUserWebTest.php (2 hits)
+	Line 81:       if ($view->field['name']->getValue($row) == $account->getUsername()) {
+	Line 93:     $this->assertEntityAlias($account, '/users/' . Unicode::strtolower($account->getUsername()));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\lib\Drupal\Core\Session\AccountInterface.php (1 hit)
+	Line 117:   public function getUsername();
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\lib\Drupal\Core\Session\AccountProxy.php (1 hit)
+	Line 116:   public function getUsername() {
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\lib\Drupal\Core\Session\UserSession.php (1 hit)
+	Line 157:   public function getUsername() {
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\basic_auth\src\Tests\Authentication\BasicAuthTest.php (16 hits)
+	Line 39:     $this->basicAuthGet($url, $account->getUsername(), $account->pass_raw);
+	Line 40:     $this->assertText($account->getUsername(), 'Account name is displayed.');
+	Line 46:     $this->basicAuthGet($url, $account->getUsername(), $this->randomMachineName());
+	Line 47:     $this->assertNoText($account->getUsername(), 'Bad basic auth credentials do not authenticate the user.');
+	Line 60:     $this->basicAuthGet(Url::fromRoute('system.admin'), $account->getUsername(), $account->pass_raw);
+	Line 70:     $this->basicAuthGet($url, $account->getUsername(), $account->pass_raw);
+	Line 92:       $this->basicAuthGet($url, $incorrect_user->getUsername(), $incorrect_user->pass_raw);
+	Line 96:     $this->basicAuthGet($url, $user->getUsername(), $user->pass_raw);
+	Line 117:     $this->basicAuthGet($url, $incorrect_user->getUsername(), $incorrect_user->pass_raw);
+	Line 120:     $this->basicAuthGet($url, $user->getUsername(), $user->pass_raw);
+	Line 125:       $this->basicAuthGet($url, $incorrect_user->getUsername(), $incorrect_user->pass_raw);
+	Line 129:     $this->basicAuthGet($url, $user->getUsername(), $user->pass_raw);
+	Line 134:     $this->basicAuthGet($url, $user2->getUsername(), $user2->pass_raw);
+	Line 148:     $this->basicAuthGet($url, $account->getUsername(), $account->pass_raw);
+	Line 149:     $this->assertText($account->getUsername(), 'Account name is displayed.');
+	Line 173:     $this->basicAuthGet($url, $account->getUsername(), $this->randomMachineName());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\block\src\Tests\BlockUiTest.php (1 hit)
+	Line 212:     $expected_text = '<div id="test_context_aware--username">' . \Drupal::currentUser()->getUsername() . '</div>';
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\block\tests\modules\block_test\src\Plugin\Block\TestContextAwareBlock.php (1 hit)
+	Line 31:       '#markup' => $user ? $user->getUsername() : 'No context mapping selected.' ,
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\comment\src\Entity\Comment.php (1 hit)
+	Line 139:         $this->setAuthorName(\Drupal::currentUser()->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\comment\src\Plugin\Validation\Constraint\CommentNameConstraintValidator.php (1 hit)
+	Line 68:       if ($owner->getUsername() != $author_name) {
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\comment\src\Tests\CommentAnonymousTest.php (2 hits)
+	Line 91:       'name' => $this->adminUser->getUsername(),
+	Line 98:       '%name' => $this->adminUser->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\comment\src\Tests\CommentInterfaceTest.php (2 hits)
+	Line 109:     $comment = $this->postComment(NULL, $comment->comment_body->value, $comment->getSubject(), array('uid' => $this->webUser->getUsername() . ' (' . $this->webUser->id() . ')'));
+	Line 110:     $this->assertTrue($comment->getAuthorName() == $this->webUser->getUsername() && $comment->getOwnerId() == $this->webUser->id(), 'Comment author successfully changed to a registered user.');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\comment\src\Tests\CommentPreviewTest.php (2 hits)
+	Line 138:     $edit['uid'] = $web_user->getUsername() . ' (' . $web_user->id() . ')';
+	Line 152:     $this->assertText($web_user->getUsername(), 'Author displayed.');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\comment\src\Tests\CommentTranslationUITest.php (1 hit)
+	Line 162:         'uid' => $user->getUsername() . ' (' . $user->id() . ')',
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\comment\tests\src\Kernel\CommentFieldAccessTest.php (8 hits)
+	Line 214:           '@user' => $set['user']->getUsername(),
+	Line 219:           '@user' => $set['user']->getUsername(),
+	Line 231:         '@user' => $set['user']->getUsername(),
+	Line 253:           '@user' => $set['user']->getUsername(),
+	Line 259:           '@user' => $set['user']->getUsername(),
+	Line 274:           '@user' => $set['user']->getUsername(),
+	Line 279:           '@user' => $set['user']->getUsername(),
+	Line 301:           '@user' => $set['user']->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\comment\tests\src\Kernel\Views\CommentViewsFieldAccessTest.php (1 hit)
+	Line 70:     $this->assertFieldAccess('comment', 'uid', $user->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\contact\src\MailHandler.php (3 hits)
+	Line 130:         '%sender-name' => $sender_cloned->getUsername(),
+	Line 137:         '%sender-name' => $sender_cloned->getUsername(),
+	Line 139:         '%recipient-name' => $message->getPersonalRecipient()->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\contact\src\MessageForm.php (2 hits)
+	Line 124:       $form['name']['#value'] = $user->getUsername();
+	Line 126:       $form['name']['#plain_text'] = $user->getUsername();
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\contact\src\Tests\ContactPersonalTest.php (5 hits)
+	Line 63:     $mail = $this->webUser->getUsername() . '&escaped@example.com';
+	Line 80:       '@recipient-name' => $this->contactUser->getUsername(),
+	Line 85:     $this->assertTrue(strpos($mail['body'], $this->webUser->getUsername()) !== FALSE, 'Sender name is in sent message.');
+	Line 96:       '@recipient_name' => $this->contactUser->getUsername()
+	Line 112:     $this->assertRaw(t('Contact @username', array('@username' => $this->adminUser->getUsername())));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\content_translation\src\ContentTranslationHandler.php (1 hit)
+	Line 606:         $form_state->setErrorByName('content_translation][uid', t('The translation authoring username %name does not exist.', array('%name' => $account->getUsername())));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\content_translation\src\Tests\ContentTranslationUITestBase.php (1 hit)
+	Line 298:         'content_translation[uid]' => $user->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\content_translation\src\Tests\ContentTranslationWorkflowsTest.php (1 hit)
+	Line 151:     $args = ['@user_label' => $user->getUsername()];
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\dblog\src\Tests\DbLogTest.php (1 hit)
+	Line 349:     $this->assertTrue($count_before > 0, format_string('DBLog contains @count records for @name', array('@count' => $count_before, '@name' => $user->getUsername())));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\language\src\Tests\LanguageUrlRewritingTest.php (1 hit)
+	Line 64:     $this->assertText($this->webUser->getUsername(), 'Page correctly retrieved');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\node\src\Tests\NodeAccessBaseTableTest.php (1 hit)
+	Line 103:           'title[0][value]' => t('@private_public Article created by @user', array('@private_public' => $type, '@user' => $this->webUser->getUsername())),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\node\src\Tests\NodeCreationTest.php (2 hits)
+	Line 59:     $this->assertNoText($node->getOwner()->getUsername());
+	Line 69:     $this->assertText($node->getOwner()->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\node\src\Tests\NodeEditFormTest.php (1 hit)
+	Line 211:     $edit[$form_element_name] = $this->webUser->getUsername();
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\node\src\Tests\NodeTranslationUITest.php (1 hit)
+	Line 196:         'uid[0][target_id]' => $user->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\node\tests\src\Kernel\NodeTokenReplaceTest.php (2 hits)
+	Line 72:     $tests['[node:author]'] = $account->getUsername();
+	Line 74:     $tests['[node:author:name]'] = $account->getUsername();
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\node\tests\src\Kernel\Views\NodeViewsFieldAccessTest.php (1 hit)
+	Line 63:     $this->assertFieldAccess('node', 'uid', $user->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\rdf\src\Tests\CommentAttributesTest.php (2 hits)
+	Line 157:     $this->assertLink($this->webUser->getUsername());
+	Line 323:     $name = empty($account["name"]) ? $this->webUser->getUsername() : $account["name"] . " (not verified)";
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\rdf\src\Tests\StandardProfileTest.php (1 hit)
+	Line 480:       'value' => $this->webUser->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\rdf\src\Tests\UserAttributesTest.php (2 hits)
+	Line 76:         'value' => $author->getUsername(),
+	Line 101:         'value' => $author->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\rest\src\Tests\AuthTest.php (1 hit)
+	Line 60:     $this->basicAuthGet($entity->urlInfo()->setRouteParameter('_format', $this->defaultFormat), $account->getUsername(), $account->pass_raw);
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\rest\src\Tests\CsrfTest.php (1 hit)
+	Line 65:     $curl_options[CURLOPT_USERPWD] = $this->account->getUsername() . ':' . $this->account->pass_raw;
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\search\src\Tests\SearchConfigSettingsFormTest.php (1 hit)
+	Line 138:         'keys' => $this->searchUser->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\search\src\Tests\SearchExactTest.php (2 hits)
+	Line 65:     $this->assertText($user->getUsername(), 'Basic page node displays author name when post settings are on.');
+	Line 74:     $this->assertNoText($user->getUsername(), 'Basic page node does not display author name when post settings are off.');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\search\src\Tests\SearchNodePunctuationTest.php (1 hit)
+	Line 48:     $username = $node->getOwner()->getUsername();
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\search\src\Tests\SearchPageCacheTagsTest.php (1 hit)
+	Line 105:     $edit['keys'] = $this->searchingUser->getUsername();
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\search\src\Tests\SearchPageTextTest.php (2 hits)
+	Line 96:     $edit['keys'] = $this->searchingUser->getUsername();
+	Line 99:     $this->assertTitle(t($title_source, array('@keywords' => Unicode::truncate($this->searchingUser->getUsername(), 60, TRUE, TRUE))));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\serialization\tests\modules\entity_serialization_test\entity_serialization_test.module (1 hit)
+	Line 20:   if ($context['field_definition']->getName() == 'pass' && $context['account']->getUsername() == 'serialization_test_user') {
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\simpletest\src\Tests\BrowserTest.php (1 hit)
+	Line 94:     $edit = ['name' => $user->getUsername(), 'pass' => $user->pass_raw];
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\simpletest\src\Tests\SimpleTestBrowserTest.php (1 hit)
+	Line 60:       'name' => $user->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\simpletest\src\WebTestBase.php (2 hits)
+	Line 460:       'name' => $account->getUsername(),
+	Line 469:     $pass = $this->assert($this->drupalUserIsLoggedIn($account), format_string('User %name successfully logged in.', array('%name' => $account->getUsername())), 'User login');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Entity\EntityReferenceSelection\EntityReferenceSelectionAccessTest.php (1 hit)
+	Line 241:       $user_labels[$key] = Html::escape($account->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Installer\DistributionProfileTest.php (1 hit)
+	Line 70:     $this->assertText($this->rootUser->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Installer\InstallerTest.php (1 hit)
+	Line 21:     $this->assertText($this->rootUser->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Installer\SingleVisibleProfileTest.php (1 hit)
+	Line 60:     $this->assertText($this->rootUser->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Menu\BreadcrumbTest.php (11 hits)
+	Line 314:     $this->assertBreadcrumb('user/' . $this->adminUser->id(), $trail, $this->adminUser->getUsername());
+	Line 319:     $this->assertBreadcrumb('user', $trail, $this->adminUser->getUsername());
+	Line 320:     $this->assertBreadcrumb('user/' . $this->adminUser->id(), $trail, $this->adminUser->getUsername());
+	Line 322:       'user/' . $this->adminUser->id() => $this->adminUser->getUsername(),
+	Line 324:     $this->assertBreadcrumb('user/' . $this->adminUser->id() . '/edit', $trail, $this->adminUser->getUsername());
+	Line 335:     $this->assertBreadcrumb('user/' . $this->adminUser->id(), $trail, $this->adminUser->getUsername());
+	Line 337:       'user/' . $this->adminUser->id() => $this->adminUser->getUsername(),
+	Line 339:     $this->assertBreadcrumb('user/' . $this->adminUser->id() . '/edit', $trail, $this->adminUser->getUsername());
+	Line 343:     $this->assertBreadcrumb('user/' . $this->webUser->id(), $trail, $this->webUser->getUsername());
+	Line 345:       'user/' . $this->webUser->id() => $this->webUser->getUsername(),
+	Line 347:     $this->assertBreadcrumb('user/' . $this->webUser->id() . '/edit', $trail, $this->webUser->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Path\UrlAlterFunctionalTest.php (1 hit)
+	Line 34:     $name = $account->getUsername();
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Plugin\ContextPluginTest.php (2 hits)
+	Line 75:     $this->assertEqual($plugin->getContextValue('user')->getUsername(), $user->getUsername());
+	Line 75:     $this->assertEqual($plugin->getContextValue('user')->getUsername(), $user->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Routing\RouterTest.php (4 hits)
+	Line 239:     $this->assertText($account->getUsername() . ':' . $second_account->getUsername());
+	Line 239:     $this->assertText($account->getUsername() . ':' . $second_account->getUsername());
+	Line 243:     $this->assertText($account->getUsername() . ':' . $second_account->getUsername());
+	Line 243:     $this->assertText($account->getUsername() . ':' . $second_account->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Session\SessionAuthenticationTest.php (5 hits)
+	Line 58:     $this->basicAuthGet($protected_url, $this->user->getUsername(), $this->user->pass_raw);
+	Line 82:     $response = $this->basicAuthGet('session-test/set-session/' . $test_value, $this->user->getUsername(), $this->user->pass_raw);
+	Line 87:     $response = $this->basicAuthGet('session-test/get-session', $this->user->getUsername(), $this->user->pass_raw);
+	Line 121:     $this->basicAuthGet($no_cookie_url, $this->user->getUsername(), $this->user->pass_raw);
+	Line 126:     $edit = ['name' => $this->user->getUsername(), 'pass' => $this->user->pass_raw];
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Session\SessionHttpsTest.php (2 hits)
+	Line 120:     $edit = array('name' => $account->getUsername(), 'pass' => $account->pass_raw);
+	Line 151:     $edit = array('name' => $account->getUsername(), 'pass' => $account->pass_raw);
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Session\SessionTest.php (3 hits)
+	Line 59:       'name' => $user->getUsername(),
+	Line 64:     $pass = $this->assertText($user->getUsername(), format_string('Found name: %name', array('%name' => $user->getUsername())), 'User login');
+	Line 64:     $pass = $this->assertText($user->getUsername(), format_string('Found name: %name', array('%name' => $user->getUsername())), 'User login');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\System\AccessDeniedTest.php (2 hits)
+	Line 73:     $this->assertText($this->adminUser->getUsername(), 'Found the custom 403 page');
+	Line 101:       'name' => $this->adminUser->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\System\PageNotFoundTest.php (1 hit)
+	Line 56:     $this->assertText($this->adminUser->getUsername(), 'Found the custom 404 page');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\System\SiteMaintenanceTest.php (2 hits)
+	Line 83:       'name' => $this->user->getUsername(),
+	Line 113:       'name' => $this->user->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Theme\FastTest.php (2 hits)
+	Line 31:     $this->drupalGet('user/autocomplete', array('query' => array('q' => $this->account->getUsername())));
+	Line 32:     $this->assertRaw($this->account->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\src\Tests\Update\UpdatePathTestBase.php (1 hit)
+	Line 305:     $account->setUsername($this->rootUser->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\tests\modules\database_test\src\Form\DatabaseTestForm.php (2 hits)
+	Line 53:         'title' => array('data' => array('#title' => $account->getUsername())),
+	Line 54:         'username' => $account->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\tests\modules\form_test\src\Controller\FormTestController.php (1 hit)
+	Line 25:       'name' => $user->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\tests\modules\router_test_directory\src\TestContent.php (3 hits)
+	Line 52:     return ['#markup' => $account->getUsername()];
+	Line 56:     $current_user_name = $this->currentUser()->getUsername();
+	Line 58:     return ['#markup' => $current_user_name . ':' . $user->getUsername()];
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\tests\modules\session_test\session_test.module (1 hit)
+	Line 12:   if ($account->getUsername() == 'session_test_user') {
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\system\tests\modules\url_alter_test\src\PathProcessorTest.php (1 hit)
+	Line 45:         $path = '/user/' . $account->getUsername() . $matches[2];
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\tracker\src\Controller\TrackerUserTab.php (1 hit)
+	Line 25:     return $user->getUsername();
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\tracker\src\Tests\TrackerTest.php (1 hit)
+	Line 200:     $this->assertTitle(t('@name | @site', array('@name' => $this->user->getUsername(), '@site' => $this->config('system.site')->get('name'))), 'The user tracker page has the correct page title.');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\AccountForm.php (1 hit)
+	Line 109:       '#default_value' => (!$register ? $account->getUsername() : ''),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Controller\UserController.php (3 hits)
+	Line 98:             array('%other_user' => $account->getUsername(), '%resetting_user' => $reset_link_user->getUsername(), ':logout' => $this->url('user.logout'))), 'warning');
+	Line 98:             array('%other_user' => $account->getUsername(), '%resetting_user' => $reset_link_user->getUsername(), ':logout' => $this->url('user.logout'))), 'warning');
+	Line 161:     return $user ? ['#markup' => $user->getUsername(), '#allowed_tags' => Xss::getHtmlTagList()] : '';
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Entity\User.php (1 hit)
+	Line 359:   public function getUsername() {
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Form\UserPasswordForm.php (1 hit)
+	Line 142:       $this->logger('user')->notice('Password reset instructions mailed to %name at %email.', array('%name' => $account->getUsername(), '%email' => $account->getEmail()));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Form\UserPasswordResetForm.php (3 hits)
+	Line 69:       $form['message'] = array('#markup' => $this->t('<p>This is a one-time login for %user_name and will expire on %expiration_date.</p><p>Click on this button to log in to the site and change your password.</p>', array('%user_name' => $user->getUsername(), '%expiration_date' => $expiration_date)));
+	Line 74:       $form['message'] = array('#markup' => $this->t('<p>This is a one-time login for %user_name.</p><p>Click on this button to log in to the site and change your password.</p>', array('%user_name' => $user->getUsername())));
+	Line 102:     $this->logger->notice('User %name used one-time login link at time %timestamp.', array('%name' => $user->getUsername(), '%timestamp' => $form_state->getValue('timestamp')));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\RegisterForm.php (3 hits)
+	Line 104:       drupal_set_message($this->t('Created a new user account for <a href=":url">%name</a>. No email has been sent.', array(':url' => $account->url(), '%name' => $account->getUsername())));
+	Line 116:         drupal_set_message($this->t('The new user <a href=":url">%name</a> was created without an email address, so no welcome message was sent.', array(':url' => $account->url(), '%name' => $account->getUsername())));
+	Line 122:             drupal_set_message($this->t('A welcome message with further instructions has been emailed to the new user <a href=":url">%name</a>.', array(':url' => $account->url(), '%name' => $account->getUsername())));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\UserAdminTest.php (16 hits)
+	Line 48:     $this->assertText($user_a->getUsername(), 'Found user A on admin users page');
+	Line 49:     $this->assertText($user_b->getUsername(), 'Found user B on admin users page');
+	Line 50:     $this->assertText($user_c->getUsername(), 'Found user C on admin users page');
+	Line 51:     $this->assertText($admin_user->getUsername(), 'Found Admin user on admin users page');
+	Line 66:     $this->drupalGet('admin/people', array('query' => array('user' => $user_a->getUsername())));
+	Line 69:     $this->assertEqual($user_a->getUsername(), (string) $result[0]->td[1]->span, 'Filter by username returned the right user.');
+	Line 74:     $this->assertEqual($user_a->getUsername(), (string) $result[0]->td[1]->span, 'Filter by username returned the right user.');
+	Line 80:     $this->assertNoText($user_a->getUsername(), 'User A not on filtered by perm admin users page');
+	Line 81:     $this->assertText($user_b->getUsername(), 'Found user B on filtered by perm admin users page');
+	Line 82:     $this->assertText($user_c->getUsername(), 'Found user C on filtered by perm admin users page');
+	Line 90:     $this->assertNoText($user_a->getUsername(), 'User A not on filtered by role on admin users page');
+	Line 91:     $this->assertNoText($user_b->getUsername(), 'User B not on filtered by role on admin users page');
+	Line 92:     $this->assertText($user_c->getUsername(), 'User C on filtered by role on admin users page');
+	Line 116:     $this->assertNoText($user_a->getUsername(), 'User A not on filtered by status on admin users page');
+	Line 117:     $this->assertNoText($user_b->getUsername(), 'User B not on filtered by status on admin users page');
+	Line 118:     $this->assertText($user_c->getUsername(), 'User C on filtered by status on admin users page');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\UserBlocksTest.php (6 hits)
+	Line 70:     $edit['name'] = $user->getUsername();
+	Line 118:     $this->assertText($user1->getUsername(), 'Active user 1 found in online list.');
+	Line 119:     $this->assertText($user2->getUsername(), 'Active user 2 found in online list.');
+	Line 120:     $this->assertNoText($user3->getUsername(), 'Inactive user not found in online list.');
+	Line 121:     $this->assertTrue(strpos($this->getRawContent(), $user1->getUsername()) > strpos($this->getRawContent(), $user2->getUsername()), 'Online users are ordered correctly.');
+	Line 121:     $this->assertTrue(strpos($this->getRawContent(), $user1->getUsername()) > strpos($this->getRawContent(), $user2->getUsername()), 'Online users are ordered correctly.');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\UserCancelTest.php (10 hits)
+	Line 87:     $this->assertRaw(t('%name has been deleted.', array('%name' => $account->getUsername())), 'User deleted.');
+	Line 218:     $this->assertRaw(t('%name has been disabled.', array('%name' => $account->getUsername())), "Confirmation message displayed to user.");
+	Line 288:     $this->assertRaw(t('%name has been disabled.', array('%name' => $account->getUsername())), "Confirmation message displayed to user.");
+	Line 368:     $this->assertRaw(t('%name has been deleted.', array('%name' => $account->getUsername())), "Confirmation message displayed to user.");
+	Line 486:     $this->assertRaw(t('%name has been deleted.', array('%name' => $account->getUsername())), "Confirmation message displayed to user.");
+	Line 505:     $this->assertRaw(t('Are you sure you want to cancel the account %name?', array('%name' => $account->getUsername())), 'Confirmation form to cancel account displayed.');
+	Line 510:     $this->assertRaw(t('%name has been deleted.', array('%name' => $account->getUsername())), 'User deleted.');
+	Line 533:     $this->assertRaw(t('Are you sure you want to cancel the account %name?', array('%name' => $account->getUsername())), 'Confirmation form to cancel account displayed.');
+	Line 538:     $this->assertRaw(t('%name has been deleted.', array('%name' => $account->getUsername())), 'User deleted.');
+	Line 580:       $status = $status && (strpos($this->content, $account->getUsername() . '</em> has been deleted.') !== FALSE);
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\UserEditTest.php (1 hit)
+	Line 24:     $edit['name'] = $user2->getUsername();
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\UserEntityCallbacksTest.php (2 hits)
+	Line 48:     $this->assertEqual($this->account->label(), $this->account->getUsername(), 'The username should be used as label');
+	Line 61:     $this->assertEqual($this->account->getUsername(), $this->account->name->value, 'The user name should not be altered.');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\UserLoginTest.php (1 hit)
+	Line 159:       'name' => $account->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\UserPasswordResetTest.php (8 hits)
+	Line 81:     $edit['name'] = $this->account->getUsername();
+	Line 86:     $subject = t('Replacement login information for @username at @site', array('@username' => $this->account->getUsername(), '@site' => $this->config('system.site')->get('name')));
+	Line 98:     $this->assertText($this->account->getUsername(), 'One-time login page contains the correct username.');
+	Line 105:     $this->assertTitle(t('@name | @site', array('@name' => $this->account->getUsername(), '@site' => $this->config('system.site')->get('name'))), 'Logged in using password reset link.');
+	Line 165:     $edit = array('name' => $blocked_account->getUsername());
+	Line 167:     $this->assertRaw(t('%name is blocked or has not been activated yet.', array('%name' => $blocked_account->getUsername())), 'Notified user blocked accounts can not request a new password');
+	Line 172:     $edit = array('name' => $this->account->getUsername());
+	Line 268:     $this->assertNoText($user2->getUsername(), 'The invalid password reset page does not show the user name.');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\UserPictureTest.php (1 hit)
+	Line 99:     $alt_text = 'Profile picture for user ' . $this->webUser->getUsername();
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\UserRegistrationTest.php (3 hits)
+	Line 253:     $this->assertEqual($new_user->getUsername(), $name, 'Username matches.');
+	Line 272:     $edit = ['mail' => 'test@example.com', 'name' => $account->getUsername()];
+	Line 274:     $this->assertRaw(SafeMarkup::format('The username %value is already taken.', ['%value' => $account->getUsername()]));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\UserSearchTest.php (8 hits)
+	Line 40:     $keys = $user1->getUsername();
+	Line 65:     $this->assertText($user2->getUsername(), 'Search by email resulted in username on page for administrative user');
+	Line 72:     $this->assertText($user2->getUsername(), 'Search by email substring resulted in username on page for administrative user');
+	Line 78:     $this->assertText($user2->getUsername(), 'Search for email wildcard resulted in username on page for administrative user');
+	Line 81:     $keys = $user1->getUsername();
+	Line 94:     $edit = array('keys' => $blocked_user->getUsername());
+	Line 96:     $this->assertText($blocked_user->getUsername(), 'Blocked users are listed on the user search results for users with the "administer users" permission.');
+	Line 101:     $edit = array('keys' => $blocked_user->getUsername());
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\src\Tests\Views\ArgumentValidateTest.php (1 hit)
+	Line 67:     $this->assertTrue($view->argument['null']->validateArgument($account->getUsername()));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\tests\modules\user_access_test\user_access_test.module (2 hits)
+	Line 15:   if ($entity->getUsername() == "no_edit" && $operation == "update") {
+	Line 19:   if ($entity->getUsername() == "no_delete" && $operation == "delete") {
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\tests\src\Kernel\Migrate\MigrateUserAdminPassTest.php (2 hits)
+	Line 97:     $this->assertIdentical($admin_account->getUsername(), 'site_admin');
+	Line 104:     $this->assertIdentical($user_account->getUsername(), 'random_user');
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\user\user.module (4 hits)
+	Line 390:         $item->get('alt')->setValue(\Drupal::translation()->translate('Profile picture for user @username', ['@username' => $account->getUsername()]));
+	Line 473:   $variables['name_raw'] = $account->getUsername();
+	Line 530:   \Drupal::logger('user')->notice('Session opened for %name.', array('%name' => $account->getUsername()));
+	Line 1263:       'username' => \Drupal::currentUser()->getUsername(),
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\modules\views\tests\src\Kernel\Plugin\RelationshipTest.php (2 hits)
+	Line 173:     $this->assertEqual(1, count($this->xpath($xpath, [':id' => 1, ':author' => $author1->getUsername()])));
+	Line 174:     $this->assertEqual(1, count($this->xpath($xpath, [':id' => 2, ':author' => $author2->getUsername()])));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\tests\Drupal\KernelTests\Core\Entity\EntityFieldTest.php (7 hits)
+	Line 136:     $this->assertEqual($this->entityUser->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: User name can be read.', array('%entity_type' => $entity_type)));
+	Line 142:     $this->assertEqual($new_user1->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: Updated username value can be read.', array('%entity_type' => $entity_type)));
+	Line 148:     $this->assertEqual($new_user2->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: Updated username value can be read.', array('%entity_type' => $entity_type)));
+	Line 161:     $this->assertEqual($new_user2->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: Updated user name value can be read.', array('%entity_type' => $entity_type)));
+	Line 166:     $this->assertEqual($new_user2->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: Updated user name value can be read.', array('%entity_type' => $entity_type)));
+	Line 271:     $this->assertEqual($this->entityUser->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: User name can be read.', array('%entity_type' => $entity_type)));
+	Line 389:     $this->assertEqual($this->entityUser->getUsername(), $entity->user_id->entity->name->value, format_string('%entity_type: User name can be read.', array('%entity_type' => $entity_type)));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\tests\Drupal\KernelTests\Core\Entity\EntityQueryRelationshipTest.php (2 hits)
+	Line 121:       ->condition("user_id.entity.name", $this->accounts[0]->getUsername())
+	Line 126:       ->condition("user_id.entity.name", $this->accounts[0]->getUsername(), '<>')
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\tests\Drupal\Tests\BrowserTestBase.php (2 hits)
+	Line 854:       'name' => $account->getUsername(),
+	Line 860:     $this->assertTrue($this->drupalUserIsLoggedIn($account), SafeMarkup::format('User %name successfully logged in.', array('name' => $account->getUsername())));
+  D:\drupal8 modules\multilingual_demo-8.x-1.7\core\themes\seven\seven.theme (1 hit)
+	Line 183:       '#markup' => '<h4 class="label inline">' . t('Author') . '</h4> ' . $node->getOwner()->getUsername(),
+  D:\drupal8 modules\pathauto\src\Tests\PathautoUserWebTest.php (2 hits)
+	Line 81:       if ($view->field['name']->getValue($row) == $account->getUsername()) {
+	Line 93:     $this->assertEntityAlias($account, '/users/' . Unicode::strtolower($account->getUsername()));
+  D:\drupal8 modules\recaptcha\src\Tests\ReCaptchaBasicTest.php (1 hit)
+	Line 167:     $edit['name'] = $this->normal_user->getUsername();
+  D:\drupal8 modules\simplenews\src\Tests\SimplenewsAdministrationTest.php (1 hit)
+	Line 615:     $this->assertText('The newsletter subscriptions for user ' . $new_user->getUsername() . ' have been updated.');
+  D:\drupal8 modules\simplenews\src\Tests\SimplenewsSubscribeTest.php (1 hit)
+	Line 411:     $this->assertEqual($account->getUsername(), $edit['name']);
+  D:\drupal8 modules\ultimate_cron\src\Logger\LogEntry.php (1 hit)
+	Line 192:       $username = $user ? SafeMarkup::format('@username (@uid)', array('@username' => $user->getUsername(), '@uid' => $user->id())) : t('N/A');
