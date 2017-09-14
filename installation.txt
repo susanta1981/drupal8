@@ -1,0 +1,45 @@
+1.npm init
+==========
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "basic react application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+2. npm install --save react
+============================
+This will install react into node_modules folder
+abbreviation is "npm i -S react"
+
+3. npm install --save react-dom
+==================================
+Download react-dom and its dependency.
+4. npm install --save-dev babel-core babel-loader babel-preset-react
+  ==================================================================
+Babel is a JavaScript compiler that includes the ability to compile JSX into regular JavaScript.
+do save-dev instead of --save, coz it not required in production environment
+
+5. configure babel with creating a file .babelrc to make babel work.
+{"presets": ["env", "react"]}
+
+6. Install Webpack.
+==================
+Webpack is a transformation manager which help to run React app automatically through Babel and compile JSX before reaching browser.
+use below command to install webpack.
+npm install --save-dev webpack webpack-dev-server html-webpack-plugin
+
+7. configure webpack with creating a webpack.config.js
+To compile javascript file written in ES6, webpack needs 3 things.
+ a. What JavaScript file it should transform (entry path to index.js file)
+ b. Which transformations it should use on that file(module loaders)
+ c. Where the new, transformed file should go (output filename and path to directory)
+
+
+
+
+
